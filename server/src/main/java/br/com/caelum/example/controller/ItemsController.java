@@ -1,7 +1,6 @@
 package br.com.caelum.example.controller;
 
 import static br.com.caelum.vraptor.view.Results.representation;
-import static br.com.caelum.vraptor.view.Results.status;
 
 import java.util.List;
 
@@ -42,7 +41,7 @@ public class ItemsController {
 	@Post
 	@Consumes
 	@Path("/items")
-	public void create(Item item) 
+	public void create(Item item)
 	{
 		result.use(representation()).from(item).serialize();
 	}
